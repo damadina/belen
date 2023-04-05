@@ -1,0 +1,24 @@
+.cardt {
+    @apply bg-white shadow-lg rounded overflow-hidden;
+}
+.cardt-body {
+    @apply px-4 py-4;
+}
+.cardt-title {
+    @apply text-xl font-semibold text-gray-700 mb-2 leading-6;
+}
+.btn {
+    @apply font-bold py-2 px-4 rounded;
+}
+.btn-primary {
+    @apply bg-blue-500 text-white;
+}
+.btn-primary:hover {
+    @apply bg-blue-700;
+}
+.btn-danger {
+    @apply bg-red-500 text-white;
+}
+.btn-danger:hover {
+    @apply bg-red-700;
+}
