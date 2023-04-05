@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class DiaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         return view('admin.dias.index');
