@@ -75,8 +75,8 @@ class CategoriaController extends Controller
         ]);
 
 
-
-        return redirect()->route('admin.categorias.edit',$categoria);
+       /*  return redirect()->route('admin.categorias.edit',$categoria); */
+        return redirect()->route('admin.categorias.index',$categoria)->with('info','La Categoria se mofifico correctamente');
     }
 
     /**

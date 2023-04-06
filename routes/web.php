@@ -16,7 +16,8 @@ use App\Http\Controllers\GestorController;
 |
 */
 
-Route::get('/', [InicioController::class,'index'])->name('inicio')->middleware(['auth','verified']);
+Route::get('/', [InicioController::class,'index'])->name('inicio')->middleware('Inicializa');
+
 Route::get('/trabajos/{trabajo}', [InicioController::class,'trabajos'])->name('trabajo')->middleware(['auth','verified']);
 
 

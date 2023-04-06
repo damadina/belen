@@ -4,13 +4,27 @@ namespace App\Http\Controllers;
 Use App\Models\Jornada;
 use App\Models\Utrabajo;
 use App\Models\mensaje;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
+
 
 use Illuminate\Http\Request;
 
 class InicioController extends Controller
 {
+
+
     public function index($fecha = null)
     {
+
+        if (!Auth::check()) {
+           return redirect()->route('login');
+        }
+        // es Admin
+        if(Auth::user()->id == 1) {
+            return redirect()->route('admin.home');
+        }
 
         $trabajador = auth()->user();
 

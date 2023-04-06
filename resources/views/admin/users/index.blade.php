@@ -6,14 +6,13 @@
 @stop
 
 @section('content')
-@if(session('info'))
-<div class="alert alert-primary" role="alert">
-    <strong>OK!   </strong> {{session('info')}}
+    @if(session('info'))
+    <div class="alert alert-primary" role="alert">
+        <strong>OK!   </strong> {{session('info')}}
 
-</div>
-
-
+    </div>
 @endif
+
     @livewire('admin-user')
 @stop
 

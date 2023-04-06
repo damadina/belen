@@ -10,6 +10,15 @@
 
 
 @section('content')
+@section('content')
+    @if(session('info'))
+    <div class="alert alert-primary" role="alert">
+        <strong>OK!   </strong> {{session('info')}}
+
+    </div>
+@endif
+
+
 <div class="card">
     <div class="card-body">
         {!! Form::model($user,['route' => ['admin.users.update',$user], 'method' => 'put']) !!}

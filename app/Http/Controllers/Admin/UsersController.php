@@ -47,7 +47,8 @@ class UsersController extends Controller
         $user->roles()->sync($request->roles);
 
        /*  User::create($request->all()); */
-        return view('admin.users.index');
+       /*  return view('admin.users.index')->with('info','El Trabajdor se creo correctamente'); */
+        return redirect()->route('admin.users.index')->with('info','El Trabajdor se creo correctamente');
     }
     public function show(User  $user)
     {
@@ -82,8 +83,8 @@ class UsersController extends Controller
         ]);
 
         $user->roles()->sync($request->roles);
-        return redirect()->route('admin.users.edit',$user);
-
+        /* return redirect()->route('admin.users.edit',$user); */
+        return redirect()->route('admin.users.edit',$user)->with('info','El Trabajdor se modifico');
     }
     public function destroy(User $user)
     {

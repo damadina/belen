@@ -346,7 +346,7 @@ return [
 
         ],
         [
-            'text'        => 'Trabajos',
+            'text'        => 'Master de trabajos',
             'route'         => 'admin.plantillas.index',
              'icon'       => 'fas fa-wrench',
              'active'    => ['/plantillas*'],
@@ -361,14 +361,7 @@ return [
 
 
         ],
-        [
-            'text'        => 'Mensaje coorporativo',
-            'route'         => 'admin.mensajes.index',
-             'icon'       => 'fas fa-volume-down',
-             'active'    => ['/mensajes*'],
 
-
-        ],
 
 
         ['header' => 'PARTES DE TRABAJO'],
@@ -386,6 +379,14 @@ return [
             'route'         => 'admin.ver.index',
              'icon'       => 'fas fa-eye',
              'active'    => ['/vertrabajos*'],
+
+
+        ],
+        [
+            'text'        => 'Mensaje coorporativo',
+            'route'         => 'admin.mensajes.index',
+             'icon'       => 'fas fa-volume-down',
+             'active'    => ['/mensajes*'],
 
 
         ],

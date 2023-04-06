@@ -39,7 +39,7 @@ class AdminGenera extends Component
         //comprobar estado de Plantillas
         if(!$this->estadoPlantillas()){
             $this->okPlantillas = "disabled";
-            $this->message = "Debe asginar todos los trabajos de las plantillas antes de generar partes";
+            $this->message = "Añade trabajos para cada día y asignalos a un trabajador";
         } else {
             $this->okPlantillas = "";
         }
@@ -180,7 +180,9 @@ class AdminGenera extends Component
         foreach($tdias as $eachTdia) {
 
             $trabajos = $eachTdia->trabajos;
-
+            if($trabajos->count() == 0) {
+                return false;
+            }
 
             foreach($trabajos as $eachTrabajo) {
 

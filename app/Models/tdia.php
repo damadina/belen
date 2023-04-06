@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class tdia extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+
     public function trabajos() {
         return $this->belongsToMany(ttrabajo::class,'tdia_ttrabajo_user')->withTimestamps()->withPivot(['user_id']);
     }
