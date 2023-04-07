@@ -12,7 +12,7 @@ class ttrabajo extends Model
     use HasFactory;
     protected $guarded = ['id'];
     public function tareas() {
-        return $this->hasMany(Ttarea::class);
+        return $this->hasMany(ttarea::class);
     }
     public function categoria() {
         return $this->belongsTo(categoria::class);
