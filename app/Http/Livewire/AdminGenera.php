@@ -115,7 +115,7 @@ class AdminGenera extends Component
 
         }
 
-        $this->message="Generación de partes realizada con exito ";
+        $this->message="Generación de partes realizada con éxito";
 
 
 
