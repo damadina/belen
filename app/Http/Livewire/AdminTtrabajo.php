@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\categoria;
 use Livewire\Component;
 use App\Models\ttrabajo;
+use App\Models\ttarea;
 use Livewire\WithPagination;
 
 class AdminTtrabajo extends Component
