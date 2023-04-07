@@ -10,6 +10,6 @@ class ttarea extends Model
     use HasFactory;
     protected $guarded = ['id'];
     public function trabajo() {
-        return $this->belongsTo(Ttrabajo::class);
+        return $this->belongsTo(ttrabajo::class);
     }
 }

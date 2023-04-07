@@ -10,9 +10,7 @@ class utarea extends Model
     use HasFactory;
     protected $guarded = ['id'];
     public function trabajo() {
-        return $this->belongsTo(Utrabajo::class);
+        return $this->belongsTo(utrabajo::class);
     }
-    public function indicaciones() {
-        return $this->hasMany(Uindicacione::class);
-    }
+
 }

@@ -11,10 +11,10 @@ class utrabajo extends Model
     use HasFactory;
     protected $guarded = ['id'];
     public function tareas() {
-        return $this->hasMany(Utarea::class)->orderBy('orden');
+        return $this->hasMany(utarea::class)->orderBy('orden');
     }
     public function jornada() {
-        return $this->belongsTo(Jornada::class);
+        return $this->belongsTo(jornada::class);
     }
     public function getHorasAttribute() {
         $tiempo = $this->tiempoestimado;
