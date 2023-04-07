@@ -13,6 +13,6 @@ class jornada extends Model
         return $this->belongsTo(User::class);
     }
     public function trabajos() {
-        return $this->hasMany(Utrabajo::class)->orderBy('orden');
+        return $this->hasMany(utrabajo::class)->orderBy('orden');
     }
 }
