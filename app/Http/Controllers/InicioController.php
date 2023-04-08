@@ -64,10 +64,13 @@ class InicioController extends Controller
         $diaNumero = date_format($fecha,'d');
         $mes =  date_format($fecha,'n');
         $fechaFormateada = $diassemana[$diaLetra]." ".$diaNumero." de ".$meses[$mes-1];
+        $nombre = strtok($trabajador->name, " ");
 
 
 
-        return view('inicio', compact('fecha','trabajador','jornada', 'trabajos', 'fechaFormateada','mensajeDia'));
+
+
+        return view('inicio', compact('fecha','trabajador','jornada', 'trabajos', 'fechaFormateada','mensajeDia','nombre'));
 
 
     }

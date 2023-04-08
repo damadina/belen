@@ -21,7 +21,12 @@
 
 
     @if($jornada)
-        <div class="">
+        <div class="w-full p-4 sm:container ">
+            <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
+                <p class="font-bold">Hola, {{$nombre}}</p>
+                <p class="text-sm">Tienes {{$trabajos->count()}} trabajos programados para hoy. !que tengas un buen día!.</p>
+              </div>
+
             @foreach ($trabajos as $trabajo )
                 @php
                     $tareas = $trabajo->tareas;
@@ -61,9 +66,8 @@
 
         </div>
     @else
-            <div class="w-full mt-20">
-                <p class="text-green-800 font-semibold  text-center">NO TIENES NADA PENDIENTE PARA HOY</p>
-
+            <div class="w-full mt-5">
+                <p class="text-green-800   text-center"><span class = "font-semibold">Hola, {{$nombre}}.</span> No tienes ningun trabajo programado para hoy. Que tengas un buen día.</p>
             </div>
 
     @endif
