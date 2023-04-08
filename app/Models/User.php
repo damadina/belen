@@ -71,19 +71,19 @@ class User extends Authenticatable
 
      // Jornadas
      public function jornadas() {
-        return $this->hasMany(Jornada::class);
+        return $this->hasMany(jornada::class);
     }
 
     // Jornada del día actual
     public function jornadaHoy() {
         /* $hoy =  date('Y-m-d'); */
         $hoy = now()->addDays(1)->format('Y-m-d');
-        return $this->hasMany(Jornada::class)->where('dia',$hoy);
+        return $this->hasMany(jornada::class)->where('dia',$hoy);
     }
 
     // Proximas Jornadas
     public function jornadasProximas() {
         $hoy =  date('Y-m-d');
-        return $this->hasMany(Jornada::class)->where('dia','>',$hoy)->limit(7);
+        return $this->hasMany(jornada::class)->where('dia','>',$hoy)->limit(7);
     }
 }
