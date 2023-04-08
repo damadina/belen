@@ -3,8 +3,8 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Utrabajo;
-use App\Models\Utarea;
+use App\Models\utrabajo;
+use App\Models\utarea;
 use Nette\Utils\DateTime;
 
 class Trabajos extends Component
@@ -81,8 +81,8 @@ class Trabajos extends Component
         $this->tarea = $tarea;
         $this->tarea->save();
 
-        $this->tarea = new Utarea();
-        $this->trabajo = Utrabajo::find($this->trabajo->id);
+        $this->tarea = new utarea();
+        $this->trabajo = utrabajo::find($this->trabajo->id);
         $this->tareas = $this->trabajo->tareas;
     }
 }
