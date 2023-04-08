@@ -66,9 +66,10 @@
 
         </div>
     @else
-            <div class="w-full mt-5">
-                <p class="text-green-800   text-center"><span class = "font-semibold">Hola, {{$nombre}}.</span> No tienes ningun trabajo programado para hoy. Que tengas un buen día.</p>
-            </div>
+        <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
+            <p class="font-bold">Hola, {{$nombre}}</p>
+            <p class="text-sm">No tienes trabajos programados para hoy. !que tengas un buen día!.</p>
+        </div>
 
     @endif
 </x-app-layout>
