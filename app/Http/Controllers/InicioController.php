@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 Use App\Models\Jornada;
-use App\Models\Utrabajo;
+use App\Models\utrabajo;
 use App\Models\mensaje;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -75,7 +75,7 @@ class InicioController extends Controller
 
     }
 
-    public function trabajos(Utrabajo $trabajo) {
+    public function trabajos(utrabajo $trabajo) {
 
         $jornada = $trabajo->jornada;
 
