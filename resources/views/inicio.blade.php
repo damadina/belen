@@ -41,23 +41,42 @@
 
 
 
-                <div class="shadow-md bg-gray-50 mt-2 grid grid-cols-12 ">
+                <div class="shadow-md
+                @if($pendientes==0)
+                     bg-gray-100
+                @else
+                    bg-gray-50
+                @endif
+
+                mt-2 grid grid-cols-12 ">
                     <div class="p-2 col-span-10">
                        <p class="text-gray-900">{{$trabajo->name}}</p>
                        <p class="text-gray-800 mt-2 italic"> {{$trabajo->descripcion}}</p>
                     </div>
 
-                    <div class="col-span-2 my-auto flex justify-end ">
-                        <a href="{{route('trabajo',$trabajo,true)}}" class="flex">
-                            <span class="icon-button-badge
-                            @if($pendientes == 0)
-                                bg-green-600
-                            @endif
+                    @if($pendientes!=0)
+                        <div class="col-span-2 my-auto flex justify-end ">
+                            <a href="{{route('trabajo',$trabajo,true)}}" class="flex">
+                                <span class="icon-button-badge
+                                @if($pendientes == 0)
+                                    bg-green-600
+                                @endif
 
-                            mr-2">{{$pendientes}}</span>
-                            <i class="text-red-600 mr-4  text-2xl fas fa-chevron-right"></i>
-                        </a>
-                    </div>
+                                mr-2">{{$pendientes}}</span>
+                                <i class="text-red-600 mr-4  text-2xl fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    @else
+                        <div class="col-span-2 my-auto flex justify-end ">
+
+                                <span
+                                  class="inline-block whitespace-nowrap rounded-[0.27rem] bg-green-600 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-white mr-4"
+                                  >FINALIZADO</span
+                                >
+
+                        </div>
+
+                    @endif
 
 
                 </div>
