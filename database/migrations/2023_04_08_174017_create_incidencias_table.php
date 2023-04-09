@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('incidencias', function (Blueprint $table) {
             $table->id();
             $table->text('incidencia');
+            $table->unsignedBigInteger('user_id')->nullable()->default(null);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+
             $table->timestamps();
         });
     }
