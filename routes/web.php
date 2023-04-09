@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProximosDias;
-use App\Http\Controllers\GestorController;
+use App\Http\Controllers\IncidenciasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +17,13 @@ use App\Http\Controllers\GestorController;
 */
 
 Route::get('/', [InicioController::class,'index'])->name('inicio')->middleware('Inicializa');
+Route::resource('/incidencias', IncidenciasController::class)->names('incidencias');
 
 Route::get('/trabajos/{trabajo}', [InicioController::class,'trabajos'])->name('trabajo')->middleware(['auth','verified']);
 
 
+Route::resource('/admin/mensajes', MensajeController::class)->names('admin.mensajes');
 
-Route::get('/incidencias', function () {
-    return 'Hola Incidencias';
-})->name('incidencias');
 
 Route::get('/proximosdias',[ProximosDias::class,'index'])->name('proximosDias')->middleware(['auth','verified']);
 Route::get('/proximosdias/{dia}',[InicioController::class,'index'])->name('verdia')->middleware(['auth','verified']);

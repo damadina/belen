@@ -2,11 +2,11 @@
 @section('title', 'Administración')
 
 @section('content_header')
-    <h1>Asignación de trabajo</h1>
+    <h1>Cuaderno de Mando</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Aquí ira un cuaderno de mando</p>
 @stop
 
 @section('css')

@@ -314,7 +314,7 @@ return [
 
 
         [
-            'text'        => 'Panel Aministración',
+            'text'        => 'Cuaderno de Mando',
             'route'         => 'admin.home',
              'icon'       => 'fas fa-fw fa-tachometer-alt',
 
@@ -390,6 +390,8 @@ return [
 
 
         ],
+        ['header' => 'REPRODUCTORAS'],
+        ['header' => 'INFORMES'],
 
         /* [
             'text' => 'profile',

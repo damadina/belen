@@ -40,7 +40,7 @@
 
                         <x-slot name="content">
                             @role('Trabajador')
-                            <x-dropdown-link href="{{ route('incidencias') }}">
+                            <x-dropdown-link href="{{ route('incidencias.create') }}">
                                 Reportar incidecia
                             </x-dropdown-link>
                             <x-dropdown-link href="{{ route('proximosDias') }}">
@@ -137,7 +137,7 @@
 
             <div class="mt-3 space-y-1">
                 @role('Trabajador')
-                <x-dropdown-link href="{{ route('incidencias') }}">
+                <x-dropdown-link href="{{route('incidencias.create') }}">
                     Reportar incidecia
                 </x-dropdown-link>
                 <x-dropdown-link href="{{ route('proximosDias') }}">
