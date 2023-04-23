@@ -78,7 +78,7 @@ class Inicializa
 
         $user->roles()->sync(1);
 
-        tdia::create([
+       /*  tdia::create([
             'dia' => 'Domingo',
         ]);
         tdia::create([
@@ -102,7 +102,7 @@ class Inicializa
 
         categoria::create([
             'name' =>  'Sin categoría '
-       ]);
+       ]); */
 
 
 

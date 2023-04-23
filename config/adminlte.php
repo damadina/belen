@@ -194,7 +194,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-white navbar-light z-0',   //z-0
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -323,7 +323,7 @@ return [
 
         [
             'text'        => 'Lista de Roles',
-            'route'         => 'admin.roles.index',
+            'route'         => 'admin.roles',
              'icon'       => 'fas fa-fw fa-user-cog',
              'active'    => ['/roles*'],
              'can' => 'Admin: Crear Roles'
@@ -331,7 +331,7 @@ return [
         ],
         [
             'text'        => 'Trabajadores',
-            'route'         => 'admin.users.index',
+            'route'         => 'admin.users',
              'icon'       => 'fas fa-fw fa-users',
              'active'    => ['/users*'],
              'can'       => 'Admin: Crear Trabajador'
@@ -339,7 +339,7 @@ return [
         ],
         [
             'text'        => 'Categorias',
-            'route'         => 'admin.categorias.index',
+            'route'         => 'admin.categorias',
              'icon'       => 'fas fa-book-reader',
              'active'    => ['/categorias*'],
              'can' => 'Admin: Crear Categorias'
@@ -347,6 +347,15 @@ return [
         ],
         [
             'text'        => 'Master de trabajos',
+            'route'         => 'admin.master',
+             'icon'       => 'fas fa-wrench',
+             'active'    => ['/trabajos*'],
+             'can' => 'Gestor: Asignar Trabajos'
+
+        ],
+
+       /*  [
+            'text'        => 'Antiguo platillas',
             'route'         => 'admin.plantillas.index',
              'icon'       => 'fas fa-wrench',
              'active'    => ['/plantillas*'],
@@ -361,27 +370,13 @@ return [
 
 
         ],
-
+ */
 
 
         ['header' => 'PARTES DE TRABAJO'],
 
-        [
-            'text'        => 'Generar partes',
-            'route'         => 'admin.generate.index',
-             'icon'       => 'fas fa-tasks',
-             'active'    => ['/genera*'],
 
 
-        ],
-        [
-            'text'        => 'Ver partes',
-            'route'         => 'admin.ver.index',
-             'icon'       => 'fas fa-eye',
-             'active'    => ['/vertrabajos*'],
-
-
-        ],
         [
             'text'        => 'Mensaje coorporativo',
             'route'         => 'admin.mensajes.index',
